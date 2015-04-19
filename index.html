@@ -32,16 +32,18 @@ function generateCode()
 
 			$.each(data['libraries'], function(resourceKey, resourceValue) {
 				
-				console.log(resourceKey);
+				console.log(resourceKey.name);
 				
-				console.log(resourceValue);
+				//console.log(resourceValue);
 				
 				$resource_name = resourceValue['name'];
-				$resource_description = resourceValue['description'];
-				$resource_url = resourceValue['url'];
-				$resource_tags = resourceValue['tags'];
-				$resource_slug = resourceValue['slug'];
 				
+				$.each(resourceValue, function(codeKey, codeValue) {
+				
+					console.log(codeKey + ' = ' + codeValue);
+					
+				});
+								
 				document.getElementById("loadingrow").style.display = 'none';
 
 				});
