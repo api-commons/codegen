@@ -11,7 +11,6 @@ function generateCode()
 	$response = "";
 
 	$requestURL = document.getElementById("apisjson").value;
-	console.log("pulling: " + $requestURL);
 
 	$hosturl = 'http://api.api.kinlane.com';
 	$baseurl = '/';
@@ -19,6 +18,8 @@ function generateCode()
 
 	$query = '?url=' + $requestURL;
 	$apiurl = $hosturl + $baseurl + $resource + $query;
+
+	console.log("pulling: " + $apiurl);
 
 	$.ajax({
 		url: $apiurl,
