@@ -95,12 +95,12 @@ function generateCode()
 
 	}
 </script>
-<p>This is an APIs.json driven client code generator. If you have any Swagger 2.0 files, that are indexed by an APIs.json, you can enter the address below, and generate seven client language libraries in PHP, Python, Ruby, Java, C#, Objective-C, and Android Java, for all API endpoints defined.</p>
+<p>This is an APIs.json driven client code generator. If you have any Swagger 2.0 files, that are indexed by an APIs.json, you can enter the URL below, and generate seven client language libraries in PHP, Python, Ruby, Java, C#, Objective-C, and Android Java, for all API endpoints defined.</p>
 <p>The script is free to use, and doesn't require registration to use, but depending on how large the API is, it can take 30 to 60 seconds to run. Depending on volume, we may scale up the server, and if you'd like a dedicated server let me know.</p>
 <table align="center" style="padding: 10px;" width="95%">
 	<tr>
 		<td>APIs.json URL:</td>
-		<td><input type="text" name="file" id="apisjson" value="https://kin-lane.github.io/api/apis.json" size="45" style="font-size: 12px; height: 20px;" /></td>
+		<td><input type="text" name="file" id="apisjson" value="http://api-codegen.apievangelist.com/apis.json" size="45" style="font-size: 12px; height: 20px;" /></td>
 		<td>
 			<input type="button" onclick="generateCode();" name="generate" value="Generate" />
 			<input type="button" onclick="viewAPIJSON();" name="view" value="View" />
