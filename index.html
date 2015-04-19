@@ -21,7 +21,7 @@ function generateCode()
 	$query = '?url=' + $requestURL;
 	$apiurl = $hosturl + $baseurl + $resource + $query;
 
-	console.log("pulling: " + $apiurl);
+	//console.log("pulling: " + $apiurl);
 
 	$.ajax({
 		url: $apiurl,
@@ -34,7 +34,7 @@ function generateCode()
 				
 				$.each(libraryValue, function(resourceKey, resourceValue) {
 				
-					console.log(resourceKey);
+					//console.log(resourceKey);
 					
 					$html = '<tr>';
 					$html = $html + '<td colspan="2" style="padding-top: 0px; padding-bottom: 0px;">';				
