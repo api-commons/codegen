@@ -37,7 +37,7 @@ function generateCode()
 					console.log(resourceKey);
 					
 					$html = '<tr>';
-					$html = $html + '<td colspan="3" style="padding-top: 5px; padding-bottom: 5px;">';				
+					$html = $html + '<td colspan="3" style="padding-top: 0px; padding-bottom: 0px;">';				
 					$html = $html + '<span style="font-size:20px;">';
 					$html = $html + '<strong>' + resourceKey + '</strong>';
 					$html = $html + '</span>';				
@@ -51,7 +51,7 @@ function generateCode()
 				
 					$html = '<tr>';					
 					$html = $html + '<td width="50"></td>';					
-					$html = $html + '<td style="padding-top: 5px; padding-bottom: 5px;">';						
+					$html = $html + '<td style="padding-top: 0px; padding-bottom: 0px;">';						
 				
 					$.each(resourceValue, function(codeKey, codeValue) {
 					
@@ -71,6 +71,9 @@ function generateCode()
 				
 				});
 								
+				$html = '<tr><td colspan="3"><hr /></td></tr>';						
+				$('#resultstable').append($html);								
+							
 				document.getElementById("loadingrow").style.display = 'none';
 				document.getElementById("resultsrow").style.display = '';
 
