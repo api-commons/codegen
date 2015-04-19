@@ -5,6 +5,17 @@ title: api-codegen
 
 <script type="text/javascript">
 
+function viewAPIJSON()
+	{
+
+	$response = "";
+
+	$requestURL = document.getElementById("apisjson").value;
+
+	location.href = $requestURL;
+	
+	}
+
 function generateCode()
 	{
 
@@ -89,7 +100,10 @@ function generateCode()
 	<tr>
 		<td>APIs.json File URL:</td>
 		<td><input type="text" name="file" id="apisjson" value="https://kin-lane.github.io/api/apis.json" size="55" style="font-size: 12px; height: 20px;" /></td>
-		<td><input type="button" onclick="generateCode();" name="generate" value="Generate Client Code" /></td>
+		<td>
+			<input type="button" onclick="generateCode();" name="generate" value="Generate Client Code" />
+			<input type="button" onclick="viewAPIJSON();" name="view" value="View APIs.json" />
+		</td>
 	</tr>
 	<tr id="loadingrow" style="display: none;">
 		<td align="center" colspan="2">
