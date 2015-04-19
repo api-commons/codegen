@@ -36,6 +36,15 @@ function generateCode()
 				
 					console.log(resourceKey);
 					
+					$html = '<tr>';
+					$html = $html + '<td colspan="3" style="padding-top: 5px; padding-bottom: 5px;">';				
+					$html = $html + '<span style="font-size:20px;">';
+					$html = $html + '<strong>' + resourceKey + '</strong>';
+					$html = $html + '</span>';				
+					$html = $html + '</td>';
+					$html = $html + '</tr>';						
+					$('#resultstable').append($html); 				
+					
 					//console.log(resourceValue);
 					
 					$resource_name = resourceValue['name'];
@@ -43,6 +52,28 @@ function generateCode()
 					$.each(resourceValue, function(codeKey, codeValue) {
 					
 						console.log(codeKey + ' = ' + codeValue);
+						
+						$language = codeKey;
+						$iconurl = codeValue['icon-url'];
+						$zipurl = codeValue['zip-url'];
+						
+						$html = '<tr>';
+						
+						$html = $html + '<td width="50"></td>';
+						
+						$html = $html + '<td style="padding-top: 5px; padding-bottom: 5px;">';				
+						$html = $html + '<img src="' + $iconurl + '" width="50" />';			
+						$html = $html + '</td>';
+						
+						$html = $html + '<td style="padding-top: 5px; padding-bottom: 5px;">';				
+						$html = $html + '<a href="' + $zipurl + '">';
+						$html = $html + '<strong>' + $language + '</strong>';
+						$html = $html + '</a>';				
+						$html = $html + '</td>';												
+						
+						$html = $html + '</tr>';						
+						$('#resultstable').append($html); 							
+						
 						
 					});
 				
