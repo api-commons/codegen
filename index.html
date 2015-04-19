@@ -30,18 +30,22 @@ function generateCode()
 
 			$WorkingResponse = data;
 
-			$.each(data['libraries'][0], function(resourceKey, resourceValue) {
+			$.each(data['libraries'], function(libraryKey, libraryValue) {
 				
-				console.log(resourceKey.name);
+				$.each(libraryValue, function(resourceKey, resourceValue) {
 				
-				//console.log(resourceValue);
-				
-				$resource_name = resourceValue['name'];
-				
-				$.each(resourceValue, function(codeKey, codeValue) {
-				
-					console.log(codeKey + ' = ' + codeValue);
+					console.log(resourceKey);
 					
+					//console.log(resourceValue);
+					
+					$resource_name = resourceValue['name'];
+					
+					$.each(resourceValue, function(codeKey, codeValue) {
+					
+						console.log(codeKey + ' = ' + codeValue);
+						
+					});
+				
 				});
 								
 				document.getElementById("loadingrow").style.display = 'none';
