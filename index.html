@@ -88,6 +88,7 @@ function generateCode()
 							
 				document.getElementById("loadingrow").style.display = 'none';
 				document.getElementById("resultsrow").style.display = '';
+				document.getElementById("resultsspacerrow").style.display = '';
 
 				});
 			}
@@ -114,6 +115,9 @@ function generateCode()
 			<img src="https://s3.amazonaws.com/kinlane-productions/loading/round-loading.gif" align="center" />
 		</td>
 	</tr>
+	<tr id="resultsspacerrow" style="display: none;">
+		<td align="center" colspan="3"></td>
+	</tr>	
 	<tr id="resultsrow" style="display: none;">
 		<td align="center" colspan="3">
 			<table align="center" style="padding-left: 25px;" id="resultstable" width="95%"></table>
