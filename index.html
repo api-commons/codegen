@@ -73,7 +73,7 @@ function generateCode()
 						$iconurl = codeValue['icon-url'];
 						$zipurl = codeValue['zip-url'];
 									
-						$html = $html + '<a href="' + $zipurl + '"><img src="' + $iconurl + '" width="75" style="display: inline; padding: 3px;" /></a>';																						
+						$html = $html + '<a href="' + $zipurl + '"><img src="' + $iconurl + '" width="60" style="display: inline; padding: 3px;" /></a>';																						
 						
 					});
 					
@@ -97,7 +97,7 @@ function generateCode()
 </script>
 <p>This is an APIs.json driven client code generator. If you have any Swagger 2.0 files, that are indexed by an APIs.json, you can enter the address below, and generate seven client language libraries in PHP, Python, Ruby, Java, C#, Objective-C, and Android Java, for all API endpoints defined.</p>
 <p>The script is free to use, and doesn't require registration to use, but depending on how large the API is, it can take 30 to 60 seconds to run. Depending on volume, we may scale up the server, and if you'd like a dedicated server let me know.</p>
-<table align="center" style="padding: 15px;" width="95%">
+<table align="center" style="padding: 3px;" width="95%">
 	<tr>
 		<td>APIs.json URL:</td>
 		<td><input type="text" name="file" id="apisjson" value="https://kin-lane.github.io/api/apis.json" size="45" style="font-size: 12px; height: 20px;" /></td>
