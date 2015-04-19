@@ -34,14 +34,15 @@ function generateCode()
 				
 				console.log(resourceKey);
 				
+				console.log(resourceValue);
+				
 				$resource_name = resourceValue['name'];
 				$resource_description = resourceValue['description'];
 				$resource_url = resourceValue['url'];
 				$resource_tags = resourceValue['tags'];
 				$resource_slug = resourceValue['slug'];
-
-
-				$resourcecount++;
+				
+				document.getElementById("loadingrow").style.display = 'none';
 
 				});
 			}
