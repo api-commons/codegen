@@ -37,7 +37,7 @@ function generateCode()
 					console.log(resourceKey);
 					
 					$html = '<tr>';
-					$html = $html + '<td colspan="3" style="padding-top: 0px; padding-bottom: 0px;">';				
+					$html = $html + '<td colspan="2" style="padding-top: 0px; padding-bottom: 0px;">';				
 					$html = $html + '<span style="font-size:20px;">';
 					$html = $html + '<strong>' + resourceKey + '</strong>';
 					$html = $html + '</span>';				
@@ -61,7 +61,7 @@ function generateCode()
 						$iconurl = codeValue['icon-url'];
 						$zipurl = codeValue['zip-url'];
 									
-						$html = $html + '<a href="' + $zipurl + '"><img src="' + $iconurl + '" width="75" style="display: inline; padding: 5px;" /></a>';																						
+						$html = $html + '<a href="' + $zipurl + '"><img src="' + $iconurl + '" width="75" style="display: inline; padding: 3px;" /></a>';																						
 						
 					});
 					
@@ -71,7 +71,7 @@ function generateCode()
 				
 				});
 								
-				$html = '<tr><td colspan="3"><hr /></td></tr>';						
+				$html = '<tr><td colspan="2"><hr /></td></tr>';						
 				$('#resultstable').append($html);								
 							
 				document.getElementById("loadingrow").style.display = 'none';
@@ -100,7 +100,7 @@ function generateCode()
 	<tr id="resultsrow" style="display: none;">
 		<td align="center" colspan="2">
 			<table align="center" style="padding-left: 25px;" id="resultstable">
-				<tr><td colspan="3"><hr /></td></tr>
+				<tr><td colspan="2"><hr /></td></tr>
 			</table>
 		</td>
 	</tr>	
