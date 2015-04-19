@@ -12,6 +12,8 @@ function generateCode()
 
 	$requestURL = document.getElementById("apisjson").value;
 
+	document.getElementById("loadingrow").style.display = '';
+
 	$hosturl = 'http://api.api.kinlane.com';
 	$baseurl = '/';
 	$resource = 'apijson/codegen/client/';
@@ -54,4 +56,16 @@ function generateCode()
 		<td><input type="text" name="file" id="apisjson" value="https://kin-lane.github.io/api/apis.json" size="50" /></td>
 		<td><input type="button" onclick="generateCode();" name="generate" value="Generate" /></td>
 	</tr>
+	<tr id="loadingrow" style="display: none;">
+		<td align="center" colspan="2">
+			<img src=="https://s3.amazonaws.com/kinlane-productions/loading/round-loading.gif" align="center" />
+		</td>
+	</tr>
+	<tr id="resultsrow" style="display: none;">
+		<td align="center" colspan="2">
+			<table align="center" style="padding-left: 25px;" id="resultstable">
+				
+			</table>
+		</td>
+	</tr>	
 </table>
